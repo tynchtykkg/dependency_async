@@ -1,5 +1,11 @@
-import 'package:dependency_async/dependency_async.dart' as dependency_async;
+void main() {
+  function1();
+}
 
-void main(List<String> arguments) {
-  print('Hello world: ${dependency_async.calculate()}!');
+Future<void> function1() async {
+  print(1);
+  Future.delayed(const Duration(seconds: 3)).then((value) {
+    print(3);
+  });
+  print(2);
 }
